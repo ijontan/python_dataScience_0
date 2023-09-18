@@ -18,7 +18,7 @@ def main():
             arr = ft_filter(lambda x: len(x) > value, sys.argv[1].split(" "))
             print(arr)
         except ValueError:
-            print("AssertionError: argument is not an integer")
+            assert False, "second argument is not an integer"
         return None
     except AssertionError as e:
         print("AssertionError: ", e)
