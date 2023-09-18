@@ -2,6 +2,7 @@ import sys
 
 
 def count_words(string: str):
+    """count characters in string"""
     upper = 0
     lower = 0
     digit = 0
