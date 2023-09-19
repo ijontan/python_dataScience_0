@@ -30,6 +30,7 @@ def count_words(string: str):
 
 
 def main():
+    """main function"""
     if len(sys.argv) == 2:
         count_words(sys.argv[1])
     elif len(sys.argv) > 2:
