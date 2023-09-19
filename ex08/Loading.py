@@ -1,12 +1,10 @@
 def ft_tqdm(lst: range) -> None:
     """ft_tqdm"""
 
-    for elem in range(lst.stop + 1):
-        percentage = int((elem / (lst.stop)) * 100)
+    for elem in range(len(lst) + 1):
+        percentage = int((elem / (len(lst))) * 100)
         print(f"{percentage}%|", end="")
-        for _ in range(percentage // 2):
-            print("█", end="")
-        for _ in range(50 - (percentage // 2)):
-            print(" ", end="")
-        print(f"| {elem}/{lst.stop}", end="\r")
+        print(f"{'█' * (percentage)}{' ' * (100 - percentage)}", end="")
+        print(f"| {elem}/{len(lst)}", end="\r")
         yield elem
+    print()
